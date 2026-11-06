@@ -1,10 +1,12 @@
-// oc-forge's OpenChamber host APIs (adapters/openchamber; contract in its README):
+// oc-forge's OpenChamber host APIs (adapters/openchamber; contract in its README), through the extension side of
+// them, ./ocforge/ (a copy of oc-forge's adapters/openchamber/client/index.ts and host/protocol.ts, kept the same by
+// oc-forge's `mise run test:extensions`):
 // deep links, so a Cmd/Ctrl+click or a middle click opens the Planner's page (a
 // task, a Linear issue) or a chat in a new browser tab, and OpenChamber's own
 // tab shortcuts while the Planner has focus. On a stock OpenChamber
 // connectOcForge() resolves null and the Planner works as it always has.
 import { useEffect, useState } from 'preact/hooks';
-import { connectOcForge, type OcForgeClient } from '../../../../../adapters/openchamber/client/index.ts';
+import { connectOcForge, type OcForgeClient } from './ocforge/client/index.ts';
 import { isNewTabClick, routeOf, type PlannerPlace } from './deepLink.ts';
 
 let resolved: OcForgeClient | null = null;

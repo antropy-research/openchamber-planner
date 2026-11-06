@@ -10,7 +10,10 @@ This is its own repository, [openchamber-planner](https://github.com/antropy-res
 [oc-forge](https://github.com/antropy-research/oc-forge) holds as the submodule `extensions/planner`. The paths this
 README names outside this folder (`containers/`, `adapters/`, `tests/e2e/openchamber-adapters/`, `mise.toml`) are
 oc-forge's, and its journeys (`tests/e2e/`) run against oc-forge's dev container. A change here is committed and
-pushed in this repository first; oc-forge then commits the submodule's new commit.
+pushed in this repository first; oc-forge then commits the submodule's new commit. `panel/lib/openchamber/ocforge/`
+is a copy of oc-forge's `adapters/openchamber/client/index.ts` and `host/protocol.ts`, the extension side of its host
+APIs (links, keys, modals), so this repository builds on its own; oc-forge's `mise run test:extensions` fails when the
+two differ.
 
 Plan and progress live in the zmemory project: `.tasks/1024-planner-sunsama-features-plan.md`,
 `.tasks/1025-planner-agents-md-requirements-plan.md` and

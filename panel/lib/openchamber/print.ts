@@ -9,7 +9,7 @@
 // ("Ignored call to 'print()'"); oc-forge's adds `allow-modals` for an
 // extension that asks (`"ocForge": { "modals": true }`), and says so (`modals`).
 import { render, type VNode } from 'preact';
-import type { OcForgeClient } from '../../../../../adapters/openchamber/client/index.ts';
+import type { OcForgeClient } from './ocforge/client/index.ts';
 
 /** Why Print is unavailable on a stock OpenChamber, or a host without `allow-modals`. */
 export const PRINT_NEEDS_HOST = "Printing needs OpenChamber with oc-forge's host";
