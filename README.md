@@ -6,6 +6,12 @@ review the result, and close the day and the week. Built as an OpenChamber SDK
 extension (manifest `apiVersion` 1; SDK 2.5.3, tested on OpenChamber 2.5.3, the latest
 release, both as released and as oc-forge's adapted build; web and desktop).
 
+This is its own repository, [openchamber-planner](https://github.com/antropy-research/openchamber-planner), which
+[oc-forge](https://github.com/antropy-research/oc-forge) holds as the submodule `extensions/planner`. The paths this
+README names outside this folder (`containers/`, `adapters/`, `tests/e2e/openchamber-adapters/`, `mise.toml`) are
+oc-forge's, and its journeys (`tests/e2e/`) run against oc-forge's dev container. A change here is committed and
+pushed in this repository first; oc-forge then commits the submodule's new commit.
+
 Plan and progress live in the zmemory project: `.tasks/1024-planner-sunsama-features-plan.md`,
 `.tasks/1025-planner-agents-md-requirements-plan.md` and
 `02-draft/syncopation/2026-10-24-planner-sunsama-build-log.md`.
